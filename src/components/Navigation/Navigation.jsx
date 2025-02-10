@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Navigation.module.css";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
@@ -8,9 +9,15 @@ function Navigation() {
         <img src="/images/logo.png" alt="do some coding logo" />
       </div>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <Link to={"/home"}>
+          <li>Home</li>
+        </Link>
+        <Link to={"/about"}>
+          <li>About</li>
+        </Link>
+        <Link to={"/form"}>
+          <li>Contact</li>
+        </Link>
       </ul>
     </nav>
   );
